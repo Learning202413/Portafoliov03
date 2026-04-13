@@ -42,7 +42,7 @@ export default function Navbar({ currentPage, setPage, adminEmail, onLogout }: P
         >
           <div className="h-9 sm:h-10 w-28 sm:w-32 rounded-lg flex items-center justify-center font-mono text-xs">
             <img
-              src="../../src/assets/upla.png"
+              src="/upla.png"
               alt="Logo"
               className="h-full w-full object-contain"
             />
