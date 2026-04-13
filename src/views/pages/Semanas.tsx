@@ -131,25 +131,26 @@ export default function Semanas({ weeks, loading }: Props) {
                           <div className="mt-auto pt-4">
                             <a
                               href={week.pdfUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="flex items-center justify-between w-full p-4 md:p-5 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-500/60 hover:-translate-y-1 text-emerald-300 transition-all group/btn shadow-[0_8px_16px_-6px_rgba(16,185,129,0.2)]"
-                            >
-                              <div className="flex items-center gap-4 min-w-0">
-                                <div className="bg-slate-950 p-3 rounded-xl border border-emerald-500/30 group-hover/btn:border-emerald-400 transition-colors flex-shrink-0">
-                                  <FileText className="w-6 h-6 text-emerald-400" />
+                                download={`${week.subtitle ?? 'Semana'} - ${week.title}.pdf`}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex items-center justify-between w-full p-4 md:p-5 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-500/60 hover:-translate-y-1 text-emerald-300 transition-all group/btn shadow-[0_8px_16px_-6px_rgba(16,185,129,0.2)]"
+                              >
+                                <div className="flex items-center gap-4 min-w-0">
+                                  <div className="bg-slate-950 p-3 rounded-xl border border-emerald-500/30 group-hover/btn:border-emerald-400 transition-colors flex-shrink-0">
+                                    <FileText className="w-6 h-6 text-emerald-400" />
+                                  </div>
+                                  <div className="flex flex-col items-start min-w-0">
+                                    <span className="text-lg font-bold truncate w-full text-slate-50 group-hover/btn:text-emerald-400 transition-colors">
+                                      {week.subtitle ?? 'Semana'}   {/* ← título real */}
+                                    </span>
+                                    <span className="text-sm text-emerald-500/80 font-mono mt-0.5">{week.pdfSize}</span>
+                                  </div>
                                 </div>
-                                <div className="flex flex-col items-start min-w-0">
-                                  <span className="text-lg font-bold truncate w-full text-slate-50 group-hover/btn:text-emerald-400 transition-colors">
-                                    Material PDF
-                                  </span>
-                                  <span className="text-sm text-emerald-500/80 font-mono mt-0.5">{week.pdfSize}</span>
+                                <div className="bg-emerald-500 text-slate-950 p-2 rounded-lg opacity-80 group-hover/btn:opacity-100 group-hover/btn:scale-110 transition-all flex-shrink-0 shadow-md">
+                                  <Download className="w-5 h-5" />
                                 </div>
-                              </div>
-                              <div className="bg-emerald-500 text-slate-950 p-2 rounded-lg opacity-80 group-hover/btn:opacity-100 group-hover/btn:scale-110 transition-all flex-shrink-0 shadow-md">
-                                <Download className="w-5 h-5" />
-                              </div>
-                            </a>
+                              </a>
                           </div>
                         </div>
 

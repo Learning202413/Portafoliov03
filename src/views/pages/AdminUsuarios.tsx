@@ -12,7 +12,7 @@ interface Props {
   onAddUser:       (email: string, password: string) => Promise<void>;
   onDeleteUser:    (userId: string) => Promise<void>;
   onResetPassword: (newPassword: string) => Promise<void>;
-  onToggleActive:  (userId: string, value: boolean) => Promise<void>; // ← nuevo
+
 }
 
 export default function AdminUsuarios({ users, loading, onAddUser, onDeleteUser, onResetPassword }: Props) {

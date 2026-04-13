@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   Home, BookOpen, User, Menu, X, Users,
-  UserCircle, LogOut, Layers
+  UserCircle, LogOut,
 } from 'lucide-react';
 import type { PageType } from '../../models/types';
 import UserMenuDropdown from './UserMenuDropdown';
@@ -41,7 +41,11 @@ export default function Navbar({ currentPage, setPage, adminEmail, onLogout }: P
           onClick={() => go(adminEmail ? 'admin_semanas' : 'inicio')}
         >
           <div className="h-9 sm:h-10 w-28 sm:w-32 rounded-lg flex items-center justify-center font-mono text-xs">
-            <img src="src/assets/upla.png"alt="Logo"className="h-full w-full object-contain"/>
+            <img
+              src="../../src/assets/upla.png"
+              alt="Logo"
+              className="h-full w-full object-contain"
+            />
           </div>
         </div>
 
